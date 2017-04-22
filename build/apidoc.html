@@ -1,0 +1,1008 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/ModuleLoader/es6-module-loader"
+
+    >es6-module-loader (v0.17.11)</a>
+</h1>
+<h4>An ES6 Module Loader shim</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.es6-module-loader">module es6-module-loader</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.es6-module-loader.Loader">
+            function <span class="apidocSignatureSpan">es6-module-loader.</span>Loader
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.es6-module-loader.System.constructor">
+            function <span class="apidocSignatureSpan">es6-module-loader.</span>System.constructor
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">es6-module-loader.</span>Loader.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">es6-module-loader.</span>System</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">es6-module-loader.</span>System.constructor.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">es6-module-loader.</span>index</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.es6-module-loader.Loader">module es6-module-loader.Loader</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.es6-module-loader.Loader.Loader">
+            function <span class="apidocSignatureSpan">es6-module-loader.</span>Loader
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.es6-module-loader.Loader.prototype">module es6-module-loader.Loader.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.es6-module-loader.Loader.prototype.constructor">
+            function <span class="apidocSignatureSpan">es6-module-loader.Loader.prototype.</span>constructor
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.es6-module-loader.Loader.prototype.define">
+            function <span class="apidocSignatureSpan">es6-module-loader.Loader.prototype.</span>define
+            <span class="apidocSignatureSpan">(name, source, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.es6-module-loader.Loader.prototype.delete">
+            function <span class="apidocSignatureSpan">es6-module-loader.Loader.prototype.</span>delete
+            <span class="apidocSignatureSpan">(name)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.es6-module-loader.Loader.prototype.fetch">
+            function <span class="apidocSignatureSpan">es6-module-loader.Loader.prototype.</span>fetch
+            <span class="apidocSignatureSpan">(load)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.es6-module-loader.Loader.prototype.get">
+            function <span class="apidocSignatureSpan">es6-module-loader.Loader.prototype.</span>get
+            <span class="apidocSignatureSpan">(key)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.es6-module-loader.Loader.prototype.has">
+            function <span class="apidocSignatureSpan">es6-module-loader.Loader.prototype.</span>has
+            <span class="apidocSignatureSpan">(name)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.es6-module-loader.Loader.prototype.import">
+            function <span class="apidocSignatureSpan">es6-module-loader.Loader.prototype.</span>import
+            <span class="apidocSignatureSpan">(name, parentName, parentAddress)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.es6-module-loader.Loader.prototype.instantiate">
+            function <span class="apidocSignatureSpan">es6-module-loader.Loader.prototype.</span>instantiate
+            <span class="apidocSignatureSpan">(load)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.es6-module-loader.Loader.prototype.load">
+            function <span class="apidocSignatureSpan">es6-module-loader.Loader.prototype.</span>load
+            <span class="apidocSignatureSpan">(name)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.es6-module-loader.Loader.prototype.locate">
+            function <span class="apidocSignatureSpan">es6-module-loader.Loader.prototype.</span>locate
+            <span class="apidocSignatureSpan">(load)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.es6-module-loader.Loader.prototype.module">
+            function <span class="apidocSignatureSpan">es6-module-loader.Loader.prototype.</span>module
+            <span class="apidocSignatureSpan">(source, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.es6-module-loader.Loader.prototype.newModule">
+            function <span class="apidocSignatureSpan">es6-module-loader.Loader.prototype.</span>newModule
+            <span class="apidocSignatureSpan">(obj)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.es6-module-loader.Loader.prototype.normalize">
+            function <span class="apidocSignatureSpan">es6-module-loader.Loader.prototype.</span>normalize
+            <span class="apidocSignatureSpan">(name, referrerName, referrerAddress)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.es6-module-loader.Loader.prototype.set">
+            function <span class="apidocSignatureSpan">es6-module-loader.Loader.prototype.</span>set
+            <span class="apidocSignatureSpan">(name, module)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.es6-module-loader.Loader.prototype.translate">
+            function <span class="apidocSignatureSpan">es6-module-loader.Loader.prototype.</span>translate
+            <span class="apidocSignatureSpan">(load)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">es6-module-loader.Loader.prototype.</span>transpiler</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.es6-module-loader.System">module es6-module-loader.System</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.es6-module-loader.System.constructor">
+            function <span class="apidocSignatureSpan">es6-module-loader.System.</span>constructor
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">es6-module-loader.System.</span>_loader</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">es6-module-loader.System.</span>paths</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.es6-module-loader.System.constructor">module es6-module-loader.System.constructor</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.es6-module-loader.System.constructor.constructor">
+            function <span class="apidocSignatureSpan">es6-module-loader.System.</span>constructor
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.es6-module-loader.System.constructor.prototype">module es6-module-loader.System.constructor.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.es6-module-loader.System.constructor.prototype.fetch">
+            function <span class="apidocSignatureSpan">es6-module-loader.System.constructor.prototype.</span>fetch
+            <span class="apidocSignatureSpan">(load)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.es6-module-loader.System.constructor.prototype.instantiate">
+            function <span class="apidocSignatureSpan">es6-module-loader.System.constructor.prototype.</span>instantiate
+            <span class="apidocSignatureSpan">(load)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.es6-module-loader.System.constructor.prototype.locate">
+            function <span class="apidocSignatureSpan">es6-module-loader.System.constructor.prototype.</span>locate
+            <span class="apidocSignatureSpan">(load)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.es6-module-loader.System.constructor.prototype.normalize">
+            function <span class="apidocSignatureSpan">es6-module-loader.System.constructor.prototype.</span>normalize
+            <span class="apidocSignatureSpan">(name, parentName, parentAddress)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.es6-module-loader.index">module es6-module-loader.index</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.es6-module-loader.index.Loader">
+            function <span class="apidocSignatureSpan">es6-module-loader.index.</span>Loader
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">es6-module-loader.index.</span>System</span>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.es6-module-loader" id="apidoc.module.es6-module-loader">module es6-module-loader</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.es6-module-loader.Loader" id="apidoc.element.es6-module-loader.Loader">
+        function <span class="apidocSignatureSpan">es6-module-loader.</span>Loader
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Loader(options) {
+  this._loader = {
+    loaderObj: this,
+    loads: [],
+    modules: {},
+    importPromises: {},
+    moduleRecords: {}
+  };
+
+  // 26.3.3.6
+  defineProperty(this, &#x27;global&#x27;, {
+    get: function() {
+      return __global;
+    }
+  });
+
+  // 26.3.3.13 realm not implemented
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.es6-module-loader.System.constructor" id="apidoc.element.es6-module-loader.System.constructor">
+        function <span class="apidocSignatureSpan">es6-module-loader.</span>System.constructor
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function SystemLoader() {
+  Loader.call(this);
+  this.paths = {};
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.es6-module-loader.Loader" id="apidoc.module.es6-module-loader.Loader">module es6-module-loader.Loader</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.es6-module-loader.Loader.Loader" id="apidoc.element.es6-module-loader.Loader.Loader">
+        function <span class="apidocSignatureSpan">es6-module-loader.</span>Loader
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Loader(options) {
+  this._loader = {
+    loaderObj: this,
+    loads: [],
+    modules: {},
+    importPromises: {},
+    moduleRecords: {}
+  };
+
+  // 26.3.3.6
+  defineProperty(this, &#x27;global&#x27;, {
+    get: function() {
+      return __global;
+    }
+  });
+
+  // 26.3.3.13 realm not implemented
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.es6-module-loader.Loader.prototype" id="apidoc.module.es6-module-loader.Loader.prototype">module es6-module-loader.Loader.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.es6-module-loader.Loader.prototype.constructor" id="apidoc.element.es6-module-loader.Loader.prototype.constructor">
+        function <span class="apidocSignatureSpan">es6-module-loader.Loader.prototype.</span>constructor
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Loader(options) {
+  this._loader = {
+    loaderObj: this,
+    loads: [],
+    modules: {},
+    importPromises: {},
+    moduleRecords: {}
+  };
+
+  // 26.3.3.6
+  defineProperty(this, &#x27;global&#x27;, {
+    get: function() {
+      return __global;
+    }
+  });
+
+  // 26.3.3.13 realm not implemented
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.es6-module-loader.Loader.prototype.define" id="apidoc.element.es6-module-loader.Loader.prototype.define">
+        function <span class="apidocSignatureSpan">es6-module-loader.Loader.prototype.</span>define
+        <span class="apidocSignatureSpan">(name, source, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">define = function (name, source, options) {
+  // check if already defined
+  if (this._loader.importPromises[name])
+    throw new TypeError(&#x27;Module is already loading.&#x27;);
+  return createImportPromise(this, name, new Promise(asyncStartLoadPartwayThrough({
+    step: &#x27;translate&#x27;,
+    loader: this._loader,
+    moduleName: name,
+    moduleMetadata: options &#x26;&#x26; options.metadata || {},
+    moduleSource: source,
+    moduleAddress: options &#x26;&#x26; options.address
+  })));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.es6-module-loader.Loader.prototype.delete" id="apidoc.element.es6-module-loader.Loader.prototype.delete">
+        function <span class="apidocSignatureSpan">es6-module-loader.Loader.prototype.</span>delete
+        <span class="apidocSignatureSpan">(name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">delete = function (name) {
+  var loader = this._loader;
+  delete loader.importPromises[name];
+  delete loader.moduleRecords[name];
+  return loader.modules[name] ? delete loader.modules[name] : false;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.es6-module-loader.Loader.prototype.fetch" id="apidoc.element.es6-module-loader.Loader.prototype.fetch">
+        function <span class="apidocSignatureSpan">es6-module-loader.Loader.prototype.</span>fetch
+        <span class="apidocSignatureSpan">(load)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">fetch = function (load) {
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.es6-module-loader.Loader.prototype.get" id="apidoc.element.es6-module-loader.Loader.prototype.get">
+        function <span class="apidocSignatureSpan">es6-module-loader.Loader.prototype.</span>get
+        <span class="apidocSignatureSpan">(key)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">get = function (key) {
+  if (!this._loader.modules[key])
+    return;
+  doEnsureEvaluated(this._loader.modules[key], [], this);
+  return this._loader.modules[key].module;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.es6-module-loader.Loader.prototype.has" id="apidoc.element.es6-module-loader.Loader.prototype.has">
+        function <span class="apidocSignatureSpan">es6-module-loader.Loader.prototype.</span>has
+        <span class="apidocSignatureSpan">(name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">has = function (name) {
+  return !!this._loader.modules[name];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.es6-module-loader.Loader.prototype.import" id="apidoc.element.es6-module-loader.Loader.prototype.import">
+        function <span class="apidocSignatureSpan">es6-module-loader.Loader.prototype.</span>import
+        <span class="apidocSignatureSpan">(name, parentName, parentAddress)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">import = function (name, parentName, parentAddress) {
+  if (typeof parentName == &#x27;object&#x27;)
+    parentName = parentName.name;
+
+  // run normalize first
+  var loaderObj = this;
+
+  // added, see https://bugs.ecmascript.org/show_bug.cgi?id=2659
+  return Promise.resolve(loaderObj.normalize(name, parentName))
+  .then(function(name) {
+    var loader = loaderObj._loader;
+
+    if (loader.modules[name]) {
+      doEnsureEvaluated(loader.modules[name], [], loader._loader);
+      return loader.modules[name].module;
+    }
+
+    return loader.importPromises[name] || createImportPromise(loaderObj, name,
+      loadModule(loader, name, {})
+      .then(function(load) {
+        delete loader.importPromises[name];
+        return evaluateLoadedModule(loader, load);
+      }));
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  }
+```
+
+and load the module dynamically in the browser
+
+```html
+&#x3c;script&#x3e;
+  System.<span class="apidocCodeKeywordSpan">import</span>(&#x27;mymodule&#x27;).then(function(m) {
+    new m.q();
+  });
+&#x3c;/script&#x3e;
+```
+
+The dynamic loader returns a `Module` object, which contains getters for the named exports (in this case, `q`).
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.es6-module-loader.Loader.prototype.instantiate" id="apidoc.element.es6-module-loader.Loader.prototype.instantiate">
+        function <span class="apidocSignatureSpan">es6-module-loader.Loader.prototype.</span>instantiate
+        <span class="apidocSignatureSpan">(load)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">instantiate = function (load) {
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.es6-module-loader.Loader.prototype.load" id="apidoc.element.es6-module-loader.Loader.prototype.load">
+        function <span class="apidocSignatureSpan">es6-module-loader.Loader.prototype.</span>load
+        <span class="apidocSignatureSpan">(name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">load = function (name) {
+  var loader = this._loader;
+  if (loader.modules[name])
+    return Promise.resolve();
+  return loader.importPromises[name] || createImportPromise(this, name, new Promise(asyncStartLoadPartwayThrough({
+    step: &#x27;locate&#x27;,
+    loader: loader,
+    moduleName: name,
+    moduleMetadata: {},
+    moduleSource: undefined,
+    moduleAddress: undefined
+  }))
+  .then(function() {
+    delete loader.importPromises[name];
+  }));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.es6-module-loader.Loader.prototype.locate" id="apidoc.element.es6-module-loader.Loader.prototype.locate">
+        function <span class="apidocSignatureSpan">es6-module-loader.Loader.prototype.</span>locate
+        <span class="apidocSignatureSpan">(load)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">locate = function (load) {
+  return load.name;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.es6-module-loader.Loader.prototype.module" id="apidoc.element.es6-module-loader.Loader.prototype.module">
+        function <span class="apidocSignatureSpan">es6-module-loader.Loader.prototype.</span>module
+        <span class="apidocSignatureSpan">(source, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">module = function (source, options) {
+  var load = createLoad();
+  load.address = options &#x26;&#x26; options.address;
+  var linkSet = createLinkSet(this._loader, load);
+  var sourcePromise = Promise.resolve(source);
+  var loader = this._loader;
+  var p = linkSet.done.then(function() {
+    return evaluateLoadedModule(loader, load);
+  });
+  proceedToTranslate(loader, load, sourcePromise);
+  return p;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.es6-module-loader.Loader.prototype.newModule" id="apidoc.element.es6-module-loader.Loader.prototype.newModule">
+        function <span class="apidocSignatureSpan">es6-module-loader.Loader.prototype.</span>newModule
+        <span class="apidocSignatureSpan">(obj)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">newModule = function (obj) {
+  if (typeof obj != &#x27;object&#x27;)
+    throw new TypeError(&#x27;Expected object&#x27;);
+
+  var m = new Module();
+
+  var pNames = [];
+  if (Object.getOwnPropertyNames &#x26;&#x26; obj != null)
+    pNames = Object.getOwnPropertyNames(obj);
+  else
+    for (var key in obj)
+      pNames.push(key);
+
+  for (var i = 0; i &#x3c; pNames.length; i++) (function(key) {
+    defineProperty(m, key, {
+      configurable: false,
+      enumerable: true,
+      get: function () {
+        return obj[key];
+      },
+      set: function() {
+        throw new Error(&#x27;Module exports cannot be changed externally.&#x27;);
+      }
+    });
+  })(pNames[i]);
+
+  if (Object.freeze)
+    Object.freeze(m);
+
+  return m;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.es6-module-loader.Loader.prototype.normalize" id="apidoc.element.es6-module-loader.Loader.prototype.normalize">
+        function <span class="apidocSignatureSpan">es6-module-loader.Loader.prototype.</span>normalize
+        <span class="apidocSignatureSpan">(name, referrerName, referrerAddress)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">normalize = function (name, referrerName, referrerAddress) {
+  return name;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.es6-module-loader.Loader.prototype.set" id="apidoc.element.es6-module-loader.Loader.prototype.set">
+        function <span class="apidocSignatureSpan">es6-module-loader.Loader.prototype.</span>set
+        <span class="apidocSignatureSpan">(name, module)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">set = function (name, module) {
+  if (!(module instanceof Module))
+    throw new TypeError(&#x27;Loader.set(&#x27; + name + &#x27;, module) must be a module&#x27;);
+  this._loader.modules[name] = {
+    module: module
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+
+
+
+
+module.exports = function (config) {
+
+config.<span class="apidocCodeKeywordSpan">set</span>({
+  basePath: &#x27;&#x27;,
+  frameworks: [&#x27;benchmark&#x27;],
+  files: [
+    &#x27;dist/es6-module-loader.src.js&#x27;,
+    &#x27;test/perf.js&#x27;
+  ],
+  reporters: [&#x27;benchmark&#x27;],
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.es6-module-loader.Loader.prototype.translate" id="apidoc.element.es6-module-loader.Loader.prototype.translate">
+        function <span class="apidocSignatureSpan">es6-module-loader.Loader.prototype.</span>translate
+        <span class="apidocSignatureSpan">(load)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">translate = function (load) {
+  return load.source;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.es6-module-loader.System" id="apidoc.module.es6-module-loader.System">module es6-module-loader.System</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.es6-module-loader.System.constructor" id="apidoc.element.es6-module-loader.System.constructor">
+        function <span class="apidocSignatureSpan">es6-module-loader.System.</span>constructor
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function SystemLoader() {
+  Loader.call(this);
+  this.paths = {};
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.es6-module-loader.System.constructor" id="apidoc.module.es6-module-loader.System.constructor">module es6-module-loader.System.constructor</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.es6-module-loader.System.constructor.constructor" id="apidoc.element.es6-module-loader.System.constructor.constructor">
+        function <span class="apidocSignatureSpan">es6-module-loader.System.</span>constructor
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Function() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.es6-module-loader.System.constructor.prototype" id="apidoc.module.es6-module-loader.System.constructor.prototype">module es6-module-loader.System.constructor.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.es6-module-loader.System.constructor.prototype.fetch" id="apidoc.element.es6-module-loader.System.constructor.prototype.fetch">
+        function <span class="apidocSignatureSpan">es6-module-loader.System.constructor.prototype.</span>fetch
+        <span class="apidocSignatureSpan">(load)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">fetch = function (load) {
+  return new Promise(function(resolve, reject) {
+    fetchTextFromURL(load.address, undefined, resolve, reject);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.es6-module-loader.System.constructor.prototype.instantiate" id="apidoc.element.es6-module-loader.System.constructor.prototype.instantiate">
+        function <span class="apidocSignatureSpan">es6-module-loader.System.constructor.prototype.</span>instantiate
+        <span class="apidocSignatureSpan">(load)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">instantiate = function (load) {
+  var self = this;
+  return Promise.resolve(self.normalize(self.transpiler))
+  .then(function(transpilerNormalized) {
+    // load transpiler as a global (avoiding System clobbering)
+    if (load.address === transpilerNormalized) {
+      return {
+        deps: [],
+        execute: function() {
+          var curSystem = __global.System;
+          var curLoader = __global.Reflect.Loader;
+          // ensure not detected as CommonJS
+          __eval(&#x27;(function(require,exports,module){&#x27; + load.source + &#x27;})();&#x27;, load.address, __global);
+          __global.System = curSystem;
+          __global.Reflect.Loader = curLoader;
+          return self.newModule({ &#x27;default&#x27;: __global[self.transpiler], __useDefault: true });
+        }
+      };
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.es6-module-loader.System.constructor.prototype.locate" id="apidoc.element.es6-module-loader.System.constructor.prototype.locate">
+        function <span class="apidocSignatureSpan">es6-module-loader.System.constructor.prototype.</span>locate
+        <span class="apidocSignatureSpan">(load)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">locate = function (load) {
+  return load.name;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.es6-module-loader.System.constructor.prototype.normalize" id="apidoc.element.es6-module-loader.System.constructor.prototype.normalize">
+        function <span class="apidocSignatureSpan">es6-module-loader.System.constructor.prototype.</span>normalize
+        <span class="apidocSignatureSpan">(name, parentName, parentAddress)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">normalize = function (name, parentName, parentAddress) {
+  // NB does `import &#x27;file.js&#x27;` import relative to the parent name or baseURL?
+  //    have assumed that it is baseURL-relative here, but spec may well align with URLs to be the latter
+  //    safe option for users is to always use &#x22;./file.js&#x22; for relative
+
+  // not absolute or relative -&#x3e; apply paths (what will be sites)
+  if (!name.match(absURLRegEx) &#x26;&#x26; name[0] != &#x27;.&#x27;)
+    name = new URL(applyPaths(this.paths, name) || name, baseURI).href;
+  // apply parent-relative normalization, parentAddress is already normalized
+  else
+    name = new URL(name, parentName || baseURI).href;
+
+  return name;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.es6-module-loader.index" id="apidoc.module.es6-module-loader.index">module es6-module-loader.index</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.es6-module-loader.index.Loader" id="apidoc.element.es6-module-loader.index.Loader">
+        function <span class="apidocSignatureSpan">es6-module-loader.index.</span>Loader
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Loader(options) {
+  this._loader = {
+    loaderObj: this,
+    loads: [],
+    modules: {},
+    importPromises: {},
+    moduleRecords: {}
+  };
+
+  // 26.3.3.6
+  defineProperty(this, &#x27;global&#x27;, {
+    get: function() {
+      return __global;
+    }
+  });
+
+  // 26.3.3.13 realm not implemented
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
