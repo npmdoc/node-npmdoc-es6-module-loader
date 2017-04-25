@@ -1,6 +1,6 @@
 # npmdoc-es6-module-loader
 
-#### api documentation for  [es6-module-loader (v0.17.11)](https://github.com/ModuleLoader/es6-module-loader)  [![npm package](https://img.shields.io/npm/v/npmdoc-es6-module-loader.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-es6-module-loader) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-es6-module-loader.svg)](https://travis-ci.org/npmdoc/node-npmdoc-es6-module-loader)
+#### basic api documentation for  [es6-module-loader (v0.17.11)](https://github.com/ModuleLoader/es6-module-loader)  [![npm package](https://img.shields.io/npm/v/npmdoc-es6-module-loader.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-es6-module-loader) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-es6-module-loader.svg)](https://travis-ci.org/npmdoc/node-npmdoc-es6-module-loader)
 
 #### An ES6 Module Loader shim
 
